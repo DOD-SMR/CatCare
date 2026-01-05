@@ -1,0 +1,20 @@
+{"refugios":[
+    {
+        "id":"0",
+        "nombre":"La Chana",
+        "descripcion":"Junto al muro norte del parque.",
+        "observacionDiaria":"Ninguna",
+        "ubicacion":{
+        "latitude": 37.189007,
+        "longitude": -3.618650},
+        "tareas":[
+            {"id":"18003_CHANA_LC","nombre":"Limpiar comedero","status":"pendiente"},
+            {"id":"18003_CHANA_EC","nombre":"Echar comida","status":"pendiente"}
+        ],
+        "gatos":[
+            {"id":"gato_01","nombre":"Caspian","sexo":"macho","estado":"normal","observaciones":"Ninguna","urlFoto":"https://content.elmueble.com/medio/2023/04/14/gato-de-raza-ragdoll_5c5827ec_230414185205_1000x1493.jpg"},
+            {"id":"gato_02","nombre":"Cynthia","sexo":"hembra","estado":"prioritario","observaciones":"Cojeo leve pata trasera.","urlFoto":"https://content.elmueble.com/medio/2023/04/14/gato-de-raza-ragdoll_5c5827ec_230414185205_1000x1493.jpg"}
+        ]
+    }
+    ]
+}
