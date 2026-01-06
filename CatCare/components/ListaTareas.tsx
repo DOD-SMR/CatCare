@@ -4,10 +4,11 @@ import { tarea, tareas } from '../model/Tipos'
 import Tarea from './Tarea'
 type listaTareasProps={
     lista:tareas
+    accionPulsarTarea:(tarea:tarea,completada:boolean)=>void
 }
-export default function ListaTareas({lista}:listaTareasProps) {
+export default function ListaTareas({lista,accionPulsarTarea}:listaTareasProps) {
     function getEtiquetaTarea({item}){
-    return <Tarea item={item}/>
+    return <Tarea item={item} accionPulsarTarea={accionPulsarTarea}/>
   }
   return (
     <FlatList data={lista}

@@ -4,14 +4,14 @@ import { gato } from '../model/Tipos'
 import { Image } from 'expo-image'
 export type gatoProps={
     item:gato
-    crearEditarGato:()=>void
+    EditarGato:(gato:gato)=>void
 }
-export default function Gato({item,crearEditarGato}:gatoProps) {
+export default function Gato({item,EditarGato}:gatoProps) {
   return (
-    <Pressable onPress={crearEditarGato} style={[styles.gatoCard,{borderColor:item.estado ==="normal" ? "#2966ffff" 
-                                                                    : item.estado === "prioritario" ? "#e8ff4fff" : "#FF0000"}]}>
+    <Pressable onPress={()=> EditarGato(item)} style={[styles.gatoCard,{backgroundColor:item.estado ==="normal" ? "#2966ffff" 
+                                                                    : item.estado === "prioritario" ? "#ffff05ff" : "#FF0000"}]}>
       <View style={styles.container}>
-        <Image
+            <Image
             source={item.urlFoto}
             style={styles.foto}
             contentFit='cover'
@@ -30,11 +30,11 @@ export default function Gato({item,crearEditarGato}:gatoProps) {
 
 const styles = StyleSheet.create({
     gatoCard: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 12,
+    
+    borderRadius: 50,
     padding: 16,
     marginBottom: 12,
-    borderWidth: 2,
+    borderWidth: 5,
   },
   container: {
     flexDirection: 'row',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
 
   info: {
     fontSize: 14,
-    color: '#555555',
+    color: '#000000ff',
   },
 
 })

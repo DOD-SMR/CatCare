@@ -19,12 +19,16 @@ export type ubicacion={
     latitude:number
     longitude:number
 }
-export type gato={
+export type gato=gatoFormulario&{
     id:string
+}
+export type gatoFormulario={
     nombre:string
-    sexo:"macho" | "hembra"
-    estado:"normal" | "prioritario" | "urgente"
+    sexo:Sexo
+    estado:Estado
     observaciones:string
     urlFoto:string
 }
 export type gatos=Array<gato>
+export type Sexo="macho"|"hembra" | ""
+export type Estado = "normal" | "prioritario" | "urgente" | ""

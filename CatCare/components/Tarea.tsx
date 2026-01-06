@@ -4,14 +4,16 @@ import { tarea } from '../model/Tipos'
 import { MaterialIcons } from '@expo/vector-icons'
 type TareaProps={
     item:tarea
+    accionPulsarTarea:(tarea:tarea,completada:boolean)=>void
 }
-export default function Tarea({item}:TareaProps){
+export default function Tarea({item,accionPulsarTarea}:TareaProps){
   const [completada,setCompletada] = useState<boolean>(false)
   return (
     <View style={[styles.contenedor,{opacity:completada?0.5 : 1}]}>
       <Text style={styles.texto}>{item.nombre}</Text>
       <Pressable onPress={()=> {
         setCompletada(!completada)
+        accionPulsarTarea(item,completada)
         }} style={styles.boton}>
         <MaterialIcons name={"check-circle"} size={32} color={"#51a926ff"}/>
       </Pressable>
