@@ -57,7 +57,7 @@ export default function Refugio({item,accionConsultarPermisoUbicacion,accionSele
 
         const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
 
-        const distanciaKm = Math.round(R * c)
+        const distanciaKm = Math.round(+(R * c).toFixed(1))
         
         return `${distanciaKm} km`
     }
