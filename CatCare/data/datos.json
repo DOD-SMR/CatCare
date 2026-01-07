@@ -32,7 +32,7 @@
           "id": "gato_01",
           "nombre": "Caspian",
           "sexo": "macho",
-          "estado": "normal",
+          "estado": "prioritario",
           "observaciones": "Extremadamente bello.",
           "urlFoto": "https://content.elmueble.com/medio/2023/04/14/gato-de-raza-ragdoll_5c5827ec_230414185205_1000x1493.jpg"
         }

@@ -169,7 +169,7 @@ export default function App() {
   function accionPulsarTarea(tarea:tarea,completada:boolean){
     if(completada){
       const nuevaLista = tareasCompletadas.filter(tareaFiltrada=> tareaFiltrada.id===tarea.id)
-      setListaTareas(nuevaLista)
+      setListaTareasCompletadas(nuevaLista)
     }else{
       const nuevaLista = [tarea,...tareasCompletadas]
       setListaTareasCompletadas(nuevaLista)
